@@ -1,6 +1,7 @@
 import json
 import os
 
+
 from linebot import (
     LineBotApi, WebhookHandler
 )
@@ -17,7 +18,7 @@ def lambda_handler(event, context):
 
     line_bot_api.reply_message(
         msg['events'][0]['replyToken'],
-        TextSendMessage(text=msg['events'][0]['message']['text'])
+        TextSendMessage(text="เป็นไรครับ")
     )
 
     return {
